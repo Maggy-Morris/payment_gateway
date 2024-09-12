@@ -5,8 +5,10 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     this.onTap,
     super.key,
+    required this.text,
   });
 
+  final String text;
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
@@ -20,9 +22,9 @@ class CustomButton extends StatelessWidget {
             color: const Color(0xFF34A853),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15))),
-        child: const Center(
+        child:  Center(
           child: Text(
-            "Complete Payment",
+            text,
             textAlign: TextAlign.center,
             style: Styles.style22,
           ),
